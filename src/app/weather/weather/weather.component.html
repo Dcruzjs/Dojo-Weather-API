@@ -1,0 +1,16 @@
+<div class="container-lg">
+  <div class="card d-flex" *ngIf="city$ | async as city">
+    <div class="w-25 border">
+      <h3>{{city.name}}</h3>
+      <div>Humidity: {{city.main.humidity}}</div>
+      <div>Temperature: {{city.main.temp}}</div>
+      <div>Temperature High: {{city.main.temp_max}}</div>
+      <div>Temperature Low: {{city.main.temp_min}}</div>
+      <div>Status: {{city.weather[0].description}}</div>
+    </div>
+    <div class="w-50 border">
+      <img class="w-75" src="https://fomantic-ui.com/images/wireframe/image.png" alt="">
+    </div>
+
+  </div>
+</div>
